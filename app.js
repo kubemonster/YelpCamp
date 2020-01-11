@@ -87,4 +87,4 @@ app.use("/index/:id/comments",commentRoutes);
 
 
 
-app.listen(3000,process.env.IP);
+app.listen(process.env.PORT,process.env.IP);
