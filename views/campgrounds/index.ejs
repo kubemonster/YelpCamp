@@ -1,0 +1,44 @@
+
+<%- include('../partials/header'); -%>
+
+
+
+
+
+
+    <div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                    Welcom to YelpCamp!
+                <p>View out Hand-picked campgrounds from the world</p>
+                <p>
+                    <a class="btn btn-primary  btn-large" href="/index/new">Add new</a>
+                </p> 
+            </div>
+           
+        
+            </header>
+
+
+  
+            <div class  ="row" style="display:flex;flex-wrap:wrap;">
+                <% data.forEach((dict)=>{ %>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="img-thumbnail" >
+                            <img src="<%=dict.image%>" class="img-fluid img-thumbnail" >
+                            <div class="caption"> 
+                              <h4>  <%= dict.name %> </h4>
+                            </div>
+                            <p>
+                                <a href="/index/<%=dict._id%>" class="btn btn-primary">More Info</a>
+                            </p>
+                        </div>
+                        
+                     
+                    </div>
+                <%});%>
+            </div>
+
+    
+
+<%- include('../partials/footer'); -%>

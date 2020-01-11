@@ -1,0 +1,26 @@
+<%- include('../partials/header'); -%>
+
+<div class="container">
+    <div class = "row">
+       
+        <div style="width: 30%;margin:0 auto;">
+            <h3 style="text-align: center;">Edit campground<%=data.name%></h3>
+         <form action="/index/<%=data._id%>?_method=PUT" method="POST">
+                <div class="form-group">
+                <input class="form-control" type="text" name="data[name]" value="<%=data.name%>" />
+                <input class="form-control" type="text" name="data[image]" value="<%=data.image%>"/>
+                <input class="form-control" type="number" name="data[price]" min="0.01" step="0.1" value="<%=data.price%>"/>
+                <input class="form-control" type="text" name="data[description]" placeholder="<%=data.description%>"/>
+                <input  class="btn btn-lg btn-primary btn-default btn-block" type="submit" />
+                <a href="/index" >Go back!!</a>
+            </div>
+               
+        </div>
+    </div> 
+    
+</form>
+
+</div>
+    
+</div>
+<%- include('../partials/footer'); -%>

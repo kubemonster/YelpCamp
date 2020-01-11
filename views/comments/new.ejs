@@ -1,0 +1,23 @@
+<%- include('../partials/header'); -%>
+
+<div class="container">
+    <div class = "row">
+       
+        <div style="width: 30%;margin:0 auto;">
+            <h3 style="text-align: center;">Add New Comments  ::<%=data.name%></h3>
+            <form action="/index/<%=data._id%>/comments" method="POST">
+                <div class="form-group">
+                <input class="form-control" type="text" name="comment[text]" placeholder="Text" />
+                <input  class="btn btn-lg btn-primary btn-default btn-block" type="submit" />
+                <a href="/index" >Go back!!</a>
+            </div>
+               
+        </div>
+    </div> 
+    
+</form>
+
+</div>
+    
+</div>
+<%- include('../partials/footer'); -%>
