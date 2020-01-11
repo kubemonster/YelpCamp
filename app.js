@@ -14,8 +14,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(flash());
 //mongoose.connect('mongodb://localhost:27017/yelpcamp', {useNewUrlParser: true,  useUnifiedTopology: true });
 
-mongoose.Promise = global.Promise;
-const databaseUri = process.env.MONGODB_URI || 'mongodb+srv://kyubee08:sexsexsex@yelpcamp-uat8f.mongodb.net/test?retryWrites=true&w=majority';
+//mongoose.Promise = global.Promise;
+const databaseUri = 'mongodb+srv://kyubee08:sexsexsex@yelpcamp-uat8f.mongodb.net/test?retryWrites=true&w=majority';
 mongoose.connect(databaseUri, {useUnifiedTopology: true,useNewUrlParser: true })
       .then(() => console.log(`Database connected`))
       .catch(err => console.log(`Database connection error: ${err.message}`));
@@ -33,7 +33,7 @@ var Campground          = require("./models/campground"),
 
 var commentRoutes       = require("./routes/comments"),
     campgroundRoutes    = require("./routes/campgrounds"),
-    indexRoutes    = require("./routes/index");
+    indexRoutes         = require("./routes/index");
 
     
     //seedDB();//no seeding
@@ -74,17 +74,6 @@ app.use("/index/:id/comments",commentRoutes);
 
 
 
-// ========================
-//  COMMENTS ROUTES
-// ==========================
-//added comment just to fuck git
-//================
-// AUTH ROUTE
-//================
-
-//SHOW register form
 
 
-
-
-app.listen(process.env.PORT,process.env.IP);
+app.listen(3000,process.env.IP);
