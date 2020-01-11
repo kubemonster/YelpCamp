@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(flash());
 //mongoose.connect('mongodb://localhost:27017/yelpcamp', {useNewUrlParser: true,  useUnifiedTopology: true });
-mongoose.connect('mongodb+srv://kyubee08:sexsexsex@yelpcamp-uat8f.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true,  useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://kyubee08:sexsexsex@yelpcamp-uat8f.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true});
 var Campground          = require("./models/campground"),
     Comment             = require("./models/comment"),
     seedDB              = require("./seed"),
