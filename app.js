@@ -15,7 +15,7 @@ app.use(flash());
 //mongoose.connect('mongodb://localhost:27017/yelpcamp', {useNewUrlParser: true,  useUnifiedTopology: true });
 
 //mongoose.Promise = global.Promise;
-const databaseUri = "mongodb://kyubee08:sexsexsex@yelpcamp-uat8f.mongodb.net/test?retryWrites=true&w=majority";
+const databaseUri = "mongodb://kyubee08:ummmmmch@yelpcamp-uat8f.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(databaseUri, {useUnifiedTopology: true,useNewUrlParser: true })
       .then(() => console.log(`Database connected`))
       .catch(err => console.log(`Database connection error: ${err.message}`));
