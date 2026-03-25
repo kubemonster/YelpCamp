@@ -36,7 +36,7 @@ var commentRoutes       = require("./routes/comments"),
     indexRoutes         = require("./routes/index");
 
     
-    //seedDB();//no seeding
+    //seedDB(); //no seeding
 
 ///====================
 //  Passport config
